@@ -52,3 +52,9 @@
 	```
 	docker-compose up 
 	```
+	
+![imagen](https://user-images.githubusercontent.com/26769446/141647738-1d8efbc3-fccf-481d-a22b-17941fcdc05e.png)	
+![imagen](https://user-images.githubusercontent.com/26769446/141647822-460f0f42-5806-4f02-be07-0dddec1cf41a.png)
+
+
+	

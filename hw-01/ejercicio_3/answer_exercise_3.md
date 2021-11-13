@@ -11,12 +11,8 @@
       ```
 2. Creamos el Dockerfile creando una imagen ngninx y copiando la carpeta html (local) a la carpeta de la imagen
       ```
-      # Use ngnix base image
-      FROM ngnix:1.19.3-alpine
-      ```
-      ```
-      # Copy src files inside app folder
-      COPY html /usr/share/nginx/html 
+      FROM nginx:1.19.3-alpine
+      COPY html /usr/share/nginx/html
       ```
 
 3. Creamos la imagen a partir del Dockerfile 
@@ -27,3 +23,5 @@
     ```
     docker run -d --name nginx-demo -p 8080:80 -v static_content:/usr/share/nginx/html nginx-demo
     ```
+5. Accedemos a http://localhost:8080/index.html 
+ ![imagen](https://user-images.githubusercontent.com/26769446/141648087-6b7cf729-722a-415f-ae22-660b514589b7.png)
