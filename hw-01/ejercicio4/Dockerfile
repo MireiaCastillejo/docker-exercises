@@ -1,10 +1,17 @@
-# Use ngnix base image
-FROM nginx:1.19.3-alpine
+FROM node:alpine3.14
 
-# Copy src files inside app folder
-COPY html /usr/share/nginx/html 
-RUN apk update && apk add curl
+RUN apk --no-cache add curl
+
+WORKDIR /app
+COPY src /.
+RUN npm install
 
 EXPOSE 8080
 
-HEALTHCHECK --interval=45s --timeout=5s --retries=2 CMD curl --fail http://localhost:8080 || exit  1
+HEALTHCHECK --interval=45s \
+            --timeout=5s \
+            --start-period=15s \
+            --retries=2 \
+            CMD curl http://localhost:8080 || exit 1
+
+CMD ["npm","start"]
