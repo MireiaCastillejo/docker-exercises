@@ -31,7 +31,7 @@
 
 2. Creamos la imagen a partir del Dockerfile 
     ```
-   docker build -t go-healthcheck
+   docker build -t go-healthcheck .
     ```
 3. Creamos el contenedor que apunta al puerto 8080
     ```
