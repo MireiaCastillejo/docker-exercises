@@ -1,6 +1,6 @@
 FROM node:alpine3.14
 
-RUN apk --no-cache add curl
+RUN apk update --no-cache add curl
 
 WORKDIR /app
 COPY src /.
