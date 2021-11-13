@@ -10,23 +10,10 @@
 
 1. Creamos el Dockerfile 
       ```
-		FROM node:alpine3.14
-
-		RUN apk update --no-cache add curl
-
-		WORKDIR /app
-		COPY src /.
-		RUN npm install
-
-		EXPOSE 8080
-
-		HEALTHCHECK --interval=45s \
-		            --timeout=5s \
-		            --start-period=15s \
-		            --retries=2 \
-		            CMD curl http://localhost:8080 || exit 1
-
-		CMD ["npm","start"]
+	FROM nginx:latest
+	HEALTHCHECK --interval=45s --timeout=5s --start-period=15s --retries=2 \
+  	CMD curl --fail http://localhost || exit 1
+	
       ```
 
 2. Creamos la imagen a partir del Dockerfile 
@@ -35,6 +22,7 @@
     ```
 3. Creamos el contenedor que apunta al puerto 8080
     ```
-    docker run -d go-healthcheck 
+    docker run -d -p 8080:80 go-healthcheck    
     ```
 4. Hacemos `docker-ps` y esperamos a que el STATUS a healthy
+<img width="1645" alt="Captura de pantalla 2021-11-13 a las 16 34 48" src="https://user-images.githubusercontent.com/26769446/141649743-9a7029c0-411d-412e-a27e-639d8bc99483.png">
