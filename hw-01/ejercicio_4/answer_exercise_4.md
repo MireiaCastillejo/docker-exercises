@@ -1,6 +1,6 @@
 # Ejercicio 4
    
- ###  Crea una imagen docker a partir de un Dockerfile. Esta aplicación expondrá un servicio en el puerto 8080 y se deberá hacer uso de la instrucción HEALTHCHECK para comprobar si la aplicación está ofreciendo el servicio o por si el contrario existe un problema.
+ ### Crea una imagen docker a partir de un Dockerfile. Esta aplicación expondrá un servicio en el puerto 8080 y se deberá hacer uso de la instrucción HEALTHCHECK para comprobar si la aplicación está ofreciendo el servicio o por si el contrario existe un problema.
 	El healthcheck deberá parametrizarse con la siguiente configuración:
 	- La prueba se realizará cada 45 segundos
 	- Por cada prueba realizada, se esperará que la aplicación responda en menos de 5 segundos. Si tras 5 segundos no se obtiene respuesta, se
@@ -31,9 +31,10 @@
 
 2. Creamos la imagen a partir del Dockerfile 
     ```
-   ºdocker build -t go-healthcheck
+   docker build -t go-healthcheck
     ```
-4. Creamos el contenedor que apunta al puerto 8080
+3. Creamos el contenedor que apunta al puerto 8080
     ```
     docker run -d go-healthcheck 
     ```
+4. Hacemos `docker-ps` y esperamos a que el STATUS a healthy
