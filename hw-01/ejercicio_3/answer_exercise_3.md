@@ -11,12 +11,8 @@
       ```
 2. Creamos el Dockerfile creando una imagen ngninx y copiando la carpeta html (local) a la carpeta de la imagen
       ```
-      # Use ngnix base image
-      FROM ngnix:1.19.3-alpine
-      ```
-      ```
-      # Copy src files inside app folder
-      COPY html /usr/share/nginx/html 
+      FROM nginx:1.19.3-alpine
+      COPY html /usr/share/nginx/html
       ```
 
 3. Creamos la imagen a partir del Dockerfile 
