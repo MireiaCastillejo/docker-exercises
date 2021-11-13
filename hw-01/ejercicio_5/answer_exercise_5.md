@@ -51,4 +51,4 @@
 2. Ejecutamos el comando `docker-compose up que inicia y ejecuta los contenedores
 	```
 	docker-compose up 
-	``
+	```
