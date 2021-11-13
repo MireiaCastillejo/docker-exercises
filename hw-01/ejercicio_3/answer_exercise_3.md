@@ -27,3 +27,5 @@
     ```
     docker run -d --name nginx-demo -p 8080:80 -v static_content:/usr/share/nginx/html nginx-demo
     ```
+5. Accedemos a http://localhost:8080/index.html 
+ ![imagen](https://user-images.githubusercontent.com/26769446/141648087-6b7cf729-722a-415f-ae22-660b514589b7.png)
