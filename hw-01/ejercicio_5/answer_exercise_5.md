@@ -52,3 +52,6 @@
 	```
 	docker-compose up 
 	```
+	
+![imagen](https://user-images.githubusercontent.com/26769446/141647738-1d8efbc3-fccf-481d-a22b-17941fcdc05e.png)	![Uploading imagen.png…]()
+	
