@@ -16,7 +16,7 @@
 	
       ```
 
-2. Creamos la imagen a partir del Dockerfile 
+2. A partir del Dockerfile hacemos un build 
     ```
    docker build -t go-healthcheck .
     ```
@@ -24,5 +24,5 @@
     ```
     docker run -d -p 8080:80 go-healthcheck    
     ```
-4. Hacemos `docker ps` y esperamos a que el STATUS a healthy
+4. Hacemos `docker ps` y esperamos a que el STATUS pase a healthy
 <img width="1645" alt="Captura de pantalla 2021-11-13 a las 16 34 48" src="https://user-images.githubusercontent.com/26769446/141649743-9a7029c0-411d-412e-a27e-639d8bc99483.png">
